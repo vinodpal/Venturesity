@@ -1,0 +1,48 @@
+/*
+Sanjay gives you a list of N strings and a task to solve. The task is to remove all
+dublicate string from the list and  print the resulting list of string in a sorted order.
+Input:
+Given an N integer, The Next N lines Contains a String Si
+Output: 
+Print the Sorted List.
+*/
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Set_Tree_sorting {
+	public static void main(String [] args) throws NumberFormatException, IOException{
+		TreeSet<String> tree = new TreeSet<String>();
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		String line = br.readLine();
+		while( line != null){
+			tree.add(line);
+			line = br.readLine();	
+		}
+		/*
+		 * when String inserting into TreeSet by add() method internally 
+		 * JVM call comparaTo() method which in Camparable Interface
+		 * when obj1.ComparTo(obj2)
+		 * If(obj1<obj2) return -ive value which means obj1 will be Right
+		 *	 			in right side
+		 * if(obj > obj2) return +ive value which means obj1 will be 
+		 *              Left side
+		 * if(pbj1 == obj2) return 0; which means Dublicate value not 
+		 * allow in "TreeSet";
+		 */
+		
+		Iterator<String> itr = tree.iterator();
+		while(itr.hasNext())
+		{
+			String str = itr.next();
+			System.out.println(str);
+		}
+		// Output Result in Sorting order Because TreeSet Store as 
+		// Balanced tree and sorting order
+	}
+}
