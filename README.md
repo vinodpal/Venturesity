@@ -2,6 +2,8 @@
 
 
  Prerequisites : Data-Structures, Hashing
+ 
+ 
  Explanation : 
       We can use a 5-D array to do a successful hashing of the names of customers, as, 
       the maximum length of their names is 5.
@@ -14,6 +16,7 @@
       This traversal will be such that lexicographically smaller words will be accessed first
       ( See Author's or Tester's solution for more clarity ).
        
+ 
  Time Complexity :
    Constant Time to traverse the entire Hash Array = 27^5 = 15 * 10^6 Approximate.
  
